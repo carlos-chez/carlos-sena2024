@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $productos = [
+        ['nombre' => 'proteina 1', 'precio'=> 290000],
+        ['nombre' => 'proteina 2', 'precio'=> 290000],
+        ['nombre' => 'proteina 3', 'precio'=> 290000],
+    ];
+    return view('welcome',['proteina'=> $productos]); 
 });
+
+
