@@ -6,13 +6,35 @@ use App\Http\controllers\productocontroller;
 
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Route::view('/','welcome');
 
-Route::get('/productos',[productocontroller::class, 'index'])->name('productos.index');
+//CRUD de producto
+Route::resource('productos', productocontroller::class); //crea siete rutas
+
+
+//Listar productos
+//Route::get('/productos',[productocontroller::class, 'index'])->name('productos.index');
+//Crear producto
+//Route::get('/productos/create',[productocontroller::class, 'create'])->name('productos.create');
+//Route::post('/productos',[productocontroller::class, 'store'])->name('productos.store');
+//Listar producto
+//Route::get('/productos/{producto}',[productocontroller::class, 'show'])->name('productos.show');
+//Editar producto
+//Route::get('/productos/{producto}/edit',[productocontroller::class, 'edit'])->name('productos.edit');
+//Route::put('/productos/{producto}',[productocontroller::class, 'update'])->name('productos.update');
+//Eliminar producto
+//Route::delete('/productos/{producto}',[productocontroller::class, 'destroy'])->name('productos.destroy');
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
 
+//layouts categoria
 Route::get('/oferta', function () {
     $productos = [
         ['nombre' => 'TNT mega Mass Gainer 10lb', 'precio' => 196000],

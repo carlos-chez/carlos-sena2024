@@ -13,6 +13,9 @@
         @include('layouts.navbar')
     </header>
     <main>
+        <div class="bg-red-300 my-4 text-center">
+            <h1 class="text-lg font-semibold m-4 uppercase">@yield('cabecera')</h1>
+        </div>
         @yield('contenido')
     </main>
     <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
